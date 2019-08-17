@@ -1,0 +1,16 @@
+.top {
+    background-image: url(../img/top.png);
+    background-size: cover;
+    height: 550px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    .top_text {
+        align-self: flex-end;
+        display: block;
+        color: white;
+        background-color: rgb(24, 49, 133);
+        width: 100%;
+        padding: 10px 50px;
+    }
+}

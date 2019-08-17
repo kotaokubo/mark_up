@@ -1,0 +1,253 @@
+
+// mixin //
+
+@mixin px {
+    @media screen and (min-width: 831px ){
+        @content;
+    }
+}
+@mixin tab {
+    @media screen and (max-width: 830px){
+        @content;
+    }
+}
+@mixin sp {
+    @media screen and (max-width: 375px) {
+        @content;
+    }
+}
+
+
+// button //
+
+@mixin main-btn($btn-w: 150px, $fs: 14px) {
+    width: $btn-w;
+    height: 2.5em;
+    background-color: rgb(237, 208, 114);
+    color: white;
+    font-size: $fs;
+    line-height: 3em;
+    p {
+        line-height: 1;
+        .btn-icon {
+            margin-right: 4px;
+        }
+    }
+    @content;
+}
+
+// smallObject //
+
+.smallObject {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    .sImage {
+        width: 100%;
+    }
+    .sContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 230px;
+        .sTitle {
+            padding-top: 20px;
+            p {
+                color: rgb(199, 194, 194);
+            }
+            h4 {
+            font-size: 20px;
+            color: black;
+            font: bold;
+            }
+        }
+        .sText {
+            color: black;
+        }
+        .sBtn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            .sButton {
+                @include main-btn
+            }
+            .sMore {
+                display: inline-block;
+                color: grey;
+            }
+        }
+    }
+}
+
+// more Button//
+
+.moreButton {
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .moreButtonBody {
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        width: 350px;
+        height: 70px;
+        .moreButtonText {
+            font-size: 18px;
+            display: inline-block;
+        }    
+    }
+}
+
+// midlleObject //
+
+.midlleObject {
+    width: 48.5%;
+    display: flex;
+    flex-direction: column;
+    .middleImage {
+        width: 100%;
+        height: 290px;
+        object-fit: cover;
+    }
+    .middleContent {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        .middleTitle {
+            font-size: 20px;
+        }
+        .middleMore {
+            display: inline-block;
+            align-self: flex-end;
+            color: grey;
+            margin-top: 20px; 
+        }
+    }
+}
+
+// sideObject //
+.sideObjectBody {
+    height: 3000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(250, 249, 249);
+
+    .sideObject {
+        display: flex;
+        flex-direction: column;
+        .sideObjectTitle {
+            display: flex;
+            align-items: center;
+            background-color: rgb(24, 49, 133);
+            color: white;
+            height: 60px;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bolder;
+            border-radius: 5px 5px 0 0 ;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.3);
+        }
+        .sideObjectContent {
+            padding: 20px;
+            font-size: 12px;
+        }
+    }
+}
+
+// tag //
+
+
+
+
+
+
+// common //
+
+html {
+    font-size: 62.5%; //10px
+}
+body {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    line-height: 1.67;
+}
+main{
+    // leyout //
+    display: flex;
+        .main_body {
+            width: 80%;
+        }
+        .side_body {
+            width: 20%;
+        }
+}
+footer {
+    background-color: grey;
+    height: 500px;
+    width: 100%;
+}
+.outer {
+    width: 100%;
+    padding: 45px 0 90px 0;
+    @include sp {
+        padding: 50px 0;
+    }
+}
+.inner {
+    width: 93%;
+    margin: 0 auto;
+    @include sp {
+        width: 90%;
+    }
+}
+.sideOuter {
+    width: 100%;
+    padding: 10px 20px;
+    @include sp {
+        padding: 50px 0;
+    }
+}
+.sideInner {
+    width: 95%;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    @include sp {
+        width: 90%;
+    }
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+.title {
+    color: black;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    @include sp {
+        margin-bottom: 40px;
+    }
+}
+.subTitle {
+    font-size: 1.5rem;
+    color: grey;
+    margin-bottom: 40px;
+    &:after {
+        display: inline-block;
+        content: "";
+        width: 100%;
+        height: 8px;
+        background: linear-gradient(to right, 
+        rgb(24, 49, 133)  25%, grey 25% 100%);
+   }
+}
+
+

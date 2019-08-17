@@ -1,0 +1,22 @@
+.category {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 350px;
+
+.categoryTitle {
+    font-size: 18px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.fa-pen {
+    font-size: 24px;
+    padding-right: 10px;
+    color: rgb(237, 208, 114);
+}
+.categoryList {
+    padding-left:34px; 
+    font-size: 14px;
+}
+}

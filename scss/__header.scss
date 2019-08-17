@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 20px 50px;
+    h1 {
+        font-size: 25px;
+        font-weight: 900;
+    }
+    ul {
+        display: flex;
+        font-size: 16px;
+        font-weight: bold;
+        li {
+            padding: 0 60px;
+            border-left: 1px solid black; 
+        }
+        li:first-child {
+            border: none;
+            padding-left: 0;
+        }
+    }
+}

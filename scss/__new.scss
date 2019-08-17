@@ -1,0 +1,41 @@
+.news_main {
+    display: flex;
+    height: 400px;
+    .news_main_image {
+        width: 50%;
+        padding-right: 30px;
+    } 
+    .news_main_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;    
+        padding-top: 25px;
+        width: 50%;
+        h4 {
+            font-size: 20px;
+        }
+        &:p {
+            color: grey;
+        }
+        .news_main_buttom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            .nmbutton {
+                @include main-btn
+            }
+            .nmbMore {
+                display: inline-block;
+                color: grey;
+            }
+        }
+    }
+}
+.news_sub {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 500px; 
+}
