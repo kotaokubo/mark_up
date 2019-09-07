@@ -3,4 +3,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
     height: 1300px; 
+    @include tab {
+        height: 1150px;
+    }
+    .moreButton {    
+        margin-top: 80px;
+        @include tab {
+            margin-top: 0; 
+        }
+    }
 }

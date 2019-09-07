@@ -6,6 +6,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     height: 1100px;
+    @include tab {
+        height: 1300px;
+    }
 }
 .bbi {
     width: 100%;

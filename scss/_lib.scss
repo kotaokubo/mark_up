@@ -135,6 +135,9 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: rgb(250, 249, 249);
+    @include tab {
+        height: 2500px;
+    }
 
     .sideObject {
         display: flex;
@@ -185,6 +188,15 @@ main{
         .side_body {
             width: 20%;
         }
+    @include tab {
+        flex-direction: column;
+        .main_body {
+            width: 100%;
+        }
+        .side_body {
+            width: 100%;
+        }
+    }
 }
 footer {
     background-color: grey;

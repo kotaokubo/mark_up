@@ -1,0 +1,6 @@
+.external {
+    @include tab {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
