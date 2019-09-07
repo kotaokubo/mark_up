@@ -38,6 +38,21 @@
             padding-top: 0;
         }
     }
+    @include sp {
+        flex-direction: column;
+        height: 800px;
+        .news_main_image {
+            padding: 0;
+            width: 100%;
+        }
+        .news_main_content {
+            padding-top: 10px;
+            width: 100%;
+            .news_main_buttom {
+                padding-top: 10px; 
+            }
+        }
+    }
 }
 .news_sub {
     margin-top: 50px;
@@ -45,4 +60,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     height: 500px; 
+    @include sp {
+        margin-top: 0;
+        height: 600px;
+    }
 }

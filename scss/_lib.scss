@@ -44,6 +44,7 @@
     width: 30%;
     .sImage {
         width: 100%;
+        object-fit: cover;
     }
     .sContent {
         display: flex;
@@ -76,6 +77,53 @@
                 display: inline-block;
                 color: grey;
             }
+        }
+    }
+    .sTextSp {
+        display: none;
+    }
+    @include sp {
+        height: 90px;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .sImage {
+            width: 35%;
+        }
+        .sContent {
+            width: 60%;
+            margin-left: 15px;
+            height: 90px;
+            .sTitle {
+                padding-top: 20px;
+                font-size: 10px;
+                p {
+                    color: rgb(199, 194, 194);
+                }
+                h4 {
+                font-size: 13px;
+                color: black;
+                font: bold;
+                }
+            }
+            .sText {
+                display: none;
+            }
+            .sBtn {
+                align-items: flex-end;
+                padding-top: 0;
+                    .sButton {
+                        display: none;
+                    }
+                .sMore {
+                    font-size: 5px;
+                }
+            }
+        }
+        .sTextSp {
+            margin-top: 5px;
+            display: block;
+            font-size: 13px;
         }
     }
 }
@@ -126,6 +174,9 @@
             margin-top: 20px; 
         }
     }
+    @include sp {
+        width: 100%;
+    }
 }
 
 // sideObject //
@@ -137,6 +188,9 @@
     background-color: rgb(250, 249, 249);
     @include tab {
         height: 2500px;
+    }
+    @include sp {
+        height: 3000px;
     }
 
     .sideObject {
@@ -160,13 +214,6 @@
         }
     }
 }
-
-// tag //
-
-
-
-
-
 
 // common //
 
@@ -195,6 +242,11 @@ main{
         }
         .side_body {
             width: 100%;
+        }
+    }
+    @include sp {
+        .side_body {
+            height: 3000px;
         }
     }
 }
@@ -259,7 +311,7 @@ button {
         height: 8px;
         background: linear-gradient(to right, 
         rgb(24, 49, 133)  25%, grey 25% 100%);
-   }
+    }
 }
 
 

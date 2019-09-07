@@ -24,6 +24,12 @@
             padding-left: 0;
         }
     }
+    @include sp {
+        padding: 20px 20px;
+        h1 {
+            font-size: 20px;
+        }
+    }
 }
 .tab-header-nav {
     @include px {

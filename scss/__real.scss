@@ -6,6 +6,9 @@
     @include tab {
         height: 1150px;
     }
+    @include sp {
+        height: 1500px;
+    }
     .moreButton {    
         margin-top: 80px;
         @include tab {

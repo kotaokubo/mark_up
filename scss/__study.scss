@@ -9,6 +9,9 @@
     @include tab {
         height: 1300px;
     }
+    @include sp {
+        height: 2700px;
+    }
 }
 .bbi {
     width: 100%;

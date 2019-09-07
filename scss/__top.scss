@@ -12,5 +12,9 @@
         background-color: rgb(24, 49, 133);
         width: 100%;
         padding: 10px 50px;
+        @include sp {
+            font-size: 10px;
+        }
     }
+    
 }
